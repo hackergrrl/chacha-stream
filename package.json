@@ -1,0 +1,27 @@
+{
+  "name": "chacha-stream",
+  "description": "chacha20 symmetric encryption stream",
+  "author": "Stephen Whitmore <sww@eight.net>",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/noffle/chacha-stream.git"
+  },
+  "homepage": "https://github.com/noffle/chacha-stream",
+  "bugs": "https://github.com/noffle/chacha-stream/issues",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js",
+    "lint": "standard"
+  },
+  "keywords": [],
+  "dependencies": {
+    "duplexify": "^4.1.1",
+    "sodium-universal": "^2.0.0",
+    "through2": "^3.0.1"
+  },
+  "devDependencies": {
+    "tape": "~4.6.2",
+    "standard": "~10.0.0"
+  },
+  "license": "ISC"
+}

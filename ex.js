@@ -1,14 +1,20 @@
 var Salsa = require('.')
-var through = require('through2')
+var crypto = require('crypto')
 
-var t = through(function (chunk, enc, next) {
-  console.log('passing', chunk)
-  next(null, chunk)
-})
+var key = crypto.randomBytes(32)
 
-var salsa = Salsa()
+var encode0 = Salsa.encoder(key)
+var decode0 = Salsa.decoder(key)
 
-salsa[0].write('hello world')
+var encode1 = Salsa.encoder(key)
+var decode1 = Salsa.decoder(key)
 
-salsa[0].pipe(t).pipe(salsa[1]).pipe(process.stdout)
+encode0.write('hello world')
+encode0.write('how goes it?')
+encode0.write('what the whaaaaat')
+
+encode0.pipe(decode0)
+encode1.pipe(decode1)
+
+encode1.write('test?')
 

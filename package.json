@@ -1,6 +1,6 @@
 {
   "name": "chacha-stream",
-  "description": "chacha20 symmetric encryption stream",
+  "description": "libsodium chacha20 symmetric encryption stream",
   "author": "Stephen Whitmore <sww@eight.net>",
   "version": "0.0.0",
   "repository": {
@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "duplexify": "^4.1.1",
+    "debug": "^4.1.1",
     "sodium-universal": "^2.0.0",
     "through2": "^3.0.1"
   },

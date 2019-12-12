@@ -26,7 +26,7 @@ function encrypt (key) {
     let box = Buffer.alloc(chunk.length)
     chunk.copy(box)
     instance.update(box, box)
-    debug('encrypting', chunk.toString(), 'to', box)
+    debug('encrypting', chunk, 'to', box)
     next(null, box)
   }
 
@@ -62,7 +62,7 @@ function decrypt (key) {
     let box = Buffer.alloc(chunk.length)
     chunk.copy(box)
     instance.update(box, box)
-    debug('decrypting', chunk, 'to', box.toString())
+    debug('decrypting', chunk, 'to', box)
     next(null, box)
   }
 
